@@ -49,7 +49,7 @@ class SnakeGame {
               }
 
               //account for tail in move
-              if (this.tail.length) this.tail.pop()
+              // if (this.tail.length) this.tail.pop()
               for (let i = 0; i < this.tail.length; i++) {
                      if (this.snake === this.tail[i]) {
                             this.score === -1;
