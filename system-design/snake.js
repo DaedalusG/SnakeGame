@@ -25,12 +25,14 @@ class SnakeGame {
                  @param direction - 'U' = Up, 'L' = Left, 'R' = Right, 'D' = Down 
                  @return The game's score after the move. Return -1 if game over. 
                  Game over when snake crosses the screen boundary or bites its body. 
-          * @param {string} direction
-          * @return {number}
-          */
+                 * @param {string} direction
+                 * @return {number}
+                 */
        move(direction) {
               //account for tail
               this.tail.push(this.snake)
+              console.log("this tail -->", this.tail)
+              console.log("pushed to tail")
 
               //move
               if (direction === "U") {
@@ -58,6 +60,7 @@ class SnakeGame {
 
               //check for food
               if (this.snake === this.food[0]) {
+                     console.log("got food")
                      this.score += 1;
                      this.food.shift()
               }
@@ -72,8 +75,8 @@ class SnakeGame {
                      return this.score
               }
 
-              console.log("this tail -->", this.tail)
               console.log("this.snake -->", this.snake)
+              console.log("this.food[0] -->", this.food[0])
               console.log("this.score -->", this.score)
 
               return this.score
