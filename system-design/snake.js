@@ -72,6 +72,9 @@ class SnakeGame {
                      return this.score
               }
 
+              console.log(this.tail)
+              console.log(this.snake)
+
               return this.score
        }
 }
