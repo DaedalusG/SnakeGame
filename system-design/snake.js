@@ -35,16 +35,16 @@ class SnakeGame {
               console.log("pushed to tail")
 
               //move
-              if (direction === "U") {
+              if (direction === "U" || direction === "u") {
                      this.snake[0] -= 1;
               }
-              if (direction === "L") {
+              if (direction === "L" || direction === "l") {
                      this.snake[1] -= 1;
               }
-              if (direction === "R") {
+              if (direction === "R" || direction === "r") {
                      this.snake[1] += 1;
               }
-              if (direction === "D") {
+              if (direction === "D" || direction === "d") {
                      this.snake[0] += 1;
               }
 
