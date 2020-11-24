@@ -31,21 +31,30 @@ class SnakeGame {
        move(direction) {
               //account for tail
               this.tail.push(this.snake)
+              console.log(
+                     "this snake -->", this.snake,
+                     "horizontal", this.snake[0],
+                     "diagonal:", this.snake[1]
+              )
               console.log("this tail -->", this.tail)
               console.log("pushed to tail")
 
               //move
               if (direction === "U" || direction === "u") {
                      this.snake[0] -= 1;
+                     console.log("snake moved")
               }
               if (direction === "L" || direction === "l") {
                      this.snake[1] -= 1;
+                     console.log("snake moved")
               }
               if (direction === "R" || direction === "r") {
                      this.snake[1] += 1;
+                     console.log("snake moved")
               }
               if (direction === "D" || direction === "d") {
                      this.snake[0] += 1;
+                     console.log("snake moved D")
               }
 
               //account for tail in move
