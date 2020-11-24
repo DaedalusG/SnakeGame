@@ -83,6 +83,13 @@ class SnakeGame {
        }
 }
 
+let snake = new SnakeGame(5, 10, [[0, 1], [1, 2], [2, 3]])
+snake.move('N')
+snake.move('S')
+snake.move('R')
+// snake.move('N')
+// snake.move('S')
+
 /**
  * Your SnakeGame object will be instantiated and called as such:
  * var obj = new SnakeGame(width, height, food)
