@@ -34,10 +34,10 @@ class SnakeGame {
               console.log(
                      "this snake -->", this.snake,
                      "horizontal", this.snake[0],
-                     "diagonal:", this.snake[1]
+                     "diagonal:", this.snake[1],
+                     "this tail -->", this.tail,
+                     "pushed to tail"
               )
-              console.log("this tail -->", this.tail)
-              console.log("pushed to tail")
 
               //diagonal move -- y coordinate
               if (direction === "U" || direction === "u") {
