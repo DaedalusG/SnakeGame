@@ -73,7 +73,6 @@ class SnakeGame {
                      "horizontal:", this.snake[0], "\n",
                      "diagonal:", this.snake[1], "\n",
                      "this tail -->", this.tail, "\n",
-                     "pushed to tail"
               )
 
               //check for wall
