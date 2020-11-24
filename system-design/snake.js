@@ -39,22 +39,24 @@ class SnakeGame {
               console.log("this tail -->", this.tail)
               console.log("pushed to tail")
 
-              //move
+              //diagonal move -- y coordinate
               if (direction === "U" || direction === "u") {
-                     this.snake[0] -= 1;
-                     console.log("snake moved")
-              }
-              if (direction === "L" || direction === "l") {
-                     this.snake[1] -= 1;
-                     console.log("snake moved")
-              }
-              if (direction === "R" || direction === "r") {
-                     this.snake[1] += 1;
+                     this.snake[1] = this.snake[1] + 1;
                      console.log("snake moved")
               }
               if (direction === "D" || direction === "d") {
-                     this.snake[0] += 1;
+                     this.snake[1] = this.snake[1] - 1;
                      console.log("snake moved D")
+              }
+
+              //horizontal move -- x coordinate
+              if (direction === "L" || direction === "l") {
+                     this.snake[0] = this.snake[0] - 1;
+                     console.log("snake moved")
+              }
+              if (direction === "R" || direction === "r") {
+                     this.snake[0] = this.snake[0] + 1;
+                     console.log("snake moved")
               }
 
               //account for tail in move
