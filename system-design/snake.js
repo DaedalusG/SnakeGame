@@ -34,6 +34,10 @@ class SnakeGame {
               if (direction === "U" || direction === "u") {
                      this.snake[1] = this.snake[1] + 1;
                      console.log("snake moved U", this.snake)
+                     if (this.snake === this.food[0]) {
+                            console.log("snake encountered food")
+                            this.tail.push(this.snake)
+                     }
               }
               if (direction === "D" || direction === "d") {
                      this.snake[1] = this.snake[1] - 1;
@@ -52,28 +56,24 @@ class SnakeGame {
 
               //account for tail in move
               // if (this.tail.length) this.tail.pop()
-              for (let i = 0; i < this.tail.length; i++) {
-                     if (this.snake === this.tail[i]) {
-                            this.score === -1;
-                            return this.score
-                     }
-              }
+              // for (let i = 0; i < this.tail.length; i++) {
+              //        if (this.snake === this.tail[i]) {
+              //               this.score === -1;
+              //               return this.score
+              //        }
+              // }
 
 
               //check for food
+              console.log(this.snake === this.food[0])
               if (this.snake === this.food[0]) {
                      console.log("got food")
                      this.score += 1;
                      this.food.shift()
                      //account for tail
                      this.tail.push(this.snake)
+                     this.food.shift()
               }
-              console.log(
-                     "this snake -->", this.snake, "\n",
-                     "horizontal:", this.snake[0], "\n",
-                     "diagonal:", this.snake[1], "\n",
-                     "this tail -->", this.tail, "\n",
-              )
 
               //check for wall
               if (this.snake[0] === this.height) {
@@ -87,7 +87,7 @@ class SnakeGame {
 
               console.log("this.snake -->", this.snake)
               console.log("this.food[0] -->", this.food[0])
-              console.log("this.score -->", this.score)
+              // console.log("this.score -->", this.score)
 
               return this.score
        }
