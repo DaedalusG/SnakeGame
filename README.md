@@ -20,4 +20,4 @@ Snake Game in Python and Javascript with testing
       ```
 1. Once nvm is installed and configured, we want to install the needed version of node with the command `nvm install 14.15.0`
 1. Nvm should automatically set this as the environment version after installation, but confirm with `node -v`
-1. In order to switch node versions, use the command `nvm use <desired node version>` (in our case, we want to run `nvm use 14.15.0`)
+1. In order to switch node versions, use the command `nvm use <desired node version>`
