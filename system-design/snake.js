@@ -29,15 +29,6 @@ class SnakeGame {
                  * @return {number}
                  */
        move(direction) {
-              //account for tail
-              this.tail.push(this.snake)
-              console.log(
-                     "this snake -->", this.snake,
-                     "horizontal", this.snake[0],
-                     "diagonal:", this.snake[1],
-                     "this tail -->", this.tail,
-                     "pushed to tail"
-              )
 
               //diagonal move -- y coordinate
               if (direction === "U" || direction === "u") {
@@ -74,7 +65,16 @@ class SnakeGame {
                      console.log("got food")
                      this.score += 1;
                      this.food.shift()
+                     //account for tail
+                     this.tail.push(this.snake)
               }
+              console.log(
+                     "this snake -->", this.snake, "\n",
+                     "horizontal:", this.snake[0], "\n",
+                     "diagonal:", this.snake[1], "\n",
+                     "this tail -->", this.tail, "\n",
+                     "pushed to tail"
+              )
 
               //check for wall
               if (this.snake[0] === this.height) {
@@ -95,8 +95,8 @@ class SnakeGame {
 }
 
 let snake = new SnakeGame(5, 10, [[0, 1], [1, 2], [2, 3]])
-snake.move('N')
-snake.move('S')
+snake.move('U')
+snake.move('D')
 snake.move('R')
 // snake.move('N')
 // snake.move('S')
