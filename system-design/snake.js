@@ -65,8 +65,8 @@ class SnakeGame {
 
 
               //check for food
-              console.log(this.snake === this.food[0])
-              if (this.snake === this.food[0]) {
+              console.log(this.snake[0] === this.food[0][0])
+              if ((this.snake[0] === this.food[0][0]) && (this.snake[1] === this.food[0][1])) {
                      console.log("got food")
                      this.score += 1;
                      this.food.shift()
@@ -87,7 +87,8 @@ class SnakeGame {
 
               console.log("this.snake -->", this.snake)
               console.log("this.food[0] -->", this.food[0])
-              // console.log("this.score -->", this.score)
+              console.log("this.tail -->", this.tail)
+              console.log("this.score -->", this.score)
 
               return this.score
        }
