@@ -67,7 +67,7 @@ class SnakeGame {
                      this.score += 1;
                      this.food.shift()
                      //account for tail
-                     this.tail.push(this.snake)
+                     this.tail.push([this.snake[0], this.snake[1]])
               }
 
               //check for wall
@@ -90,7 +90,7 @@ class SnakeGame {
        }
 }
 
-let snake = new SnakeGame(2, 2, [[0, 1], [1, 0], [2, 0], [1, 2], [2, 3]])
+let snake = new SnakeGame(5, 5, [[0, 1], [1, 0], [2, 0], [1, 2], [2, 3]])
 snake.move('U')
 snake.move('D')
 snake.move('R')
