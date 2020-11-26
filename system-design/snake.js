@@ -35,10 +35,6 @@ class SnakeGame {
               if (direction === "U" || direction === "u") {
                      this.snake[1] = this.snake[1] + 1;
                      console.log("snake moved U", this.snake)
-                     if (this.snake === this.food[0]) {
-                            console.log("snake encountered food")
-                            this.tail.push(this.snake)
-                     }
               }
               if (direction === "D" || direction === "d") {
                      this.snake[1] = this.snake[1] - 1;
