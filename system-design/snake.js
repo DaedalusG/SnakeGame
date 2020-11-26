@@ -86,7 +86,6 @@ class SnakeGame {
                      return this.score
               }
 
-              console.log("this.snake -->", this.snake)
               console.log("this.food -->", this.food)
               console.log("this.tail -->", this.tail)
               console.log("this.score -->", this.score)
