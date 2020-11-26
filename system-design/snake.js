@@ -66,7 +66,6 @@ class SnakeGame {
 
 
               //check for food
-              console.log(this.snake[0] === this.food[0][0])
               if ((this.snake[0] === this.food[0][0]) && (this.snake[1] === this.food[0][1])) {
                      console.log("got food")
                      this.score += 1;
