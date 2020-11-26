@@ -30,7 +30,7 @@ class SnakeGame {
                  */
 
        move(direction) {
-              console.log('---start---', this.snake, this.food)
+              console.log('---start---', this.snake, 'food ->', this.food)
               //diagonal move -- y coordinate
               if (direction === "U" || direction === "u") {
                      this.snake[1] = this.snake[1] + 1;
@@ -96,7 +96,7 @@ class SnakeGame {
        }
 }
 
-let snake = new SnakeGame(2, 2, [[0, 1], [1, 2], [2, 3]])
+let snake = new SnakeGame(2, 2, [[0, 1], [1, 0], [2, 0], [1, 2], [2, 3]])
 snake.move('U')
 snake.move('D')
 snake.move('R')
