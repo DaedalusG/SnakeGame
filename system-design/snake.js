@@ -28,8 +28,8 @@ class SnakeGame {
                  * @param {string} direction
                  * @return {number}
                  */
-       move(direction) {
 
+       move(direction) {
               //diagonal move -- y coordinate
               if (direction === "U" || direction === "u") {
                      this.snake[1] = this.snake[1] + 1;
@@ -77,10 +77,12 @@ class SnakeGame {
 
               //check for wall
               if (this.snake[0] === this.height) {
+                     console.log('hit wall')
                      this.score = -1
                      return this.score
               }
               if (this.snake[1] === this.width) {
+                     console.log('hit wall')
                      this.score = -1
                      return this.score
               }
