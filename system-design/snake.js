@@ -35,29 +35,25 @@ class SnakeGame {
               if (direction === "U" || direction === "u") {
                      this.snake[1] = this.snake[1] + 1;
                      console.log("snake moved U", this.snake)
-                     this.past.unshift('U')
-                     this.past.pop()
               }
               if (direction === "D" || direction === "d") {
                      this.snake[1] = this.snake[1] - 1;
                      console.log("snake moved D", this.snake)
-                     this.past.unshift('D')
-                     this.past.pop()
               }
 
               //horizontal move -- x coordinate
               if (direction === "L" || direction === "l") {
                      this.snake[0] = this.snake[0] - 1;
                      console.log("snake moved L", this.snake)
-                     this.past.unshift('L')
-                     this.past.pop()
               }
               if (direction === "R" || direction === "r") {
                      this.snake[0] = this.snake[0] + 1;
                      console.log("snake moved R", this.snake)
-                     this.past.unshift('R')
-                     this.past.pop()
               }
+
+              //storing and eliminating past moves
+              this.past.unshift('U')
+              this.past.pop()
 
               //account for tail in move
               // if (this.tail.length) this.tail.pop()
@@ -76,6 +72,7 @@ class SnakeGame {
                      this.food.shift()
                      //account for tail
                      this.tail.push([this.snake[0], this.snake[1]])
+                     this.past.push(direction)
               }
 
               //check for wall
@@ -92,6 +89,7 @@ class SnakeGame {
 
               console.log("this.food -->", this.food)
               console.log("this.tail -->", this.tail)
+              console.log("this.past -->", this.past)
               console.log("this.score -->", this.score)
 
               return this.score
