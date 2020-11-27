@@ -52,7 +52,7 @@ class SnakeGame {
               }
 
               //storing and eliminating past moves
-              this.past.unshift('U')
+              this.past.unshift(direction)
               this.past.pop()
               // console.log(this.past)
 
