@@ -73,7 +73,7 @@ class SnakeGame {
                      this.food.shift()
                      //account for tail
                      this.tail.push([this.snake[0], this.snake[1]])
-                     this.past.push(direction)
+                     this.past.unshift(direction)
               }
 
               //check for wall
