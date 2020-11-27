@@ -54,7 +54,7 @@ class SnakeGame {
               //storing and eliminating past moves
               this.past.unshift('U')
               this.past.pop()
-              console.log(this.past)
+              // console.log(this.past)
 
               //account for tail in move
               // if (this.tail.length) this.tail.pop()
