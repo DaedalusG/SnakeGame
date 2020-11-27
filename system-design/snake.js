@@ -10,7 +10,6 @@
  */
 class SnakeGame {
        constructor(width, height, food) {
-              // this.board = new Array(width).fill(0).map(() => new Array(height).fill(0))
               this.width = width;
               this.height = height;
               this.food = food;
