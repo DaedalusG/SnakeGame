@@ -16,6 +16,7 @@ class SnakeGame {
 
               this.snake = [0, 0]; //row column
               this.tail = [];
+              this.past = []
               this.score = 0;
        }
 
@@ -34,20 +35,32 @@ class SnakeGame {
               if (direction === "U" || direction === "u") {
                      this.snake[1] = this.snake[1] + 1;
                      console.log("snake moved U", this.snake)
+                     if (this.tail > 0) {
+                            this.past.push('U')
+                     }
               }
               if (direction === "D" || direction === "d") {
                      this.snake[1] = this.snake[1] - 1;
                      console.log("snake moved D", this.snake)
+                     if (this.tail > 0) {
+                            this.past.push('D')
+                     }
               }
 
               //horizontal move -- x coordinate
               if (direction === "L" || direction === "l") {
                      this.snake[0] = this.snake[0] - 1;
                      console.log("snake moved L", this.snake)
+                     if (this.tail > 0) {
+                            this.past.push('L')
+                     }
               }
               if (direction === "R" || direction === "r") {
                      this.snake[0] = this.snake[0] + 1;
                      console.log("snake moved R", this.snake)
+                     if (this.tail > 0) {
+                            this.past.push('R')
+                     }
               }
 
               //account for tail in move
