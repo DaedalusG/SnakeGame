@@ -56,16 +56,20 @@ class SnakeGame {
                             switch (this.past[i]) {
                                    // diagonal past moves -- y
                                    case 'U':
+                                          console.log(`tail ${i} moved ${this.past[i]}`)
                                           this.tail[i][1] += 1;
                                           break;
                                    case 'D':
+                                          console.log(`tail ${i} moved ${this.past[i]}`)
                                           this.tail[i][1] -= 1;
                                           break;
                                    // horizontail past moves -- x
                                    case 'R':
+                                          console.log(`tail ${i} moved ${this.past[i]}`)
                                           this.tail[i][0] += 1;
                                           break;
                                    case 'L':
+                                          console.log(`tail ${i} moved ${this.past[i]}`)
                                           this.tail[i][0] -= 1;
                                           break;
 
