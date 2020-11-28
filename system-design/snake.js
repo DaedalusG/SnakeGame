@@ -113,7 +113,7 @@ class SnakeGame {
 
               //check for tail crash
               if (this.tail.length > 0) {
-                     for (link in this.tail) {
+                     for (let i = 0; i < this.tail.length; i++) {
                             if ((link[0] === this.snake[0]) && (link[1] === this.snake[1])) {
                                    this.score = -1
                                    return this.score
