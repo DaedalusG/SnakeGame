@@ -115,6 +115,7 @@ class SnakeGame {
               if (this.tail.length > 0) {
                      for (let i = 0; i < this.tail.length; i++) {
                             if ((this.tail[i][0] === this.snake[0]) && (this.tail[i][1] === this.snake[1])) {
+                                   console.log("Tail Crash!")
                                    this.score = -1
                                    return this.score
                             }
