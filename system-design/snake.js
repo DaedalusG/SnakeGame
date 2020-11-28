@@ -51,6 +51,14 @@ class SnakeGame {
                      console.log("snake moved R, new position -->", this.snake)
               }
               //account for tail moves
+              if (this.tail.length === this.past.length) {
+                     for (let i = 0; i < this.past.length; i++) {
+                            switch (this.past[i]) {
+                                   case 'U':
+
+                            }
+                     }
+              }
 
 
               //account for tail in move
