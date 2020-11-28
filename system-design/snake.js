@@ -34,21 +34,21 @@ class SnakeGame {
               //diagonal move -- y coordinate
               if (direction === "U" || direction === "u") {
                      this.snake[1] = this.snake[1] + 1;
-                     console.log("snake moved U", this.snake)
+                     console.log("snake moved U, new position -->", this.snake)
               }
               if (direction === "D" || direction === "d") {
                      this.snake[1] = this.snake[1] - 1;
-                     console.log("snake moved D", this.snake)
+                     console.log("snake moved D, new position -->", this.snake)
               }
 
               //horizontal move -- x coordinate
               if (direction === "L" || direction === "l") {
                      this.snake[0] = this.snake[0] - 1;
-                     console.log("snake moved L", this.snake)
+                     console.log("snake moved L, new position -->", this.snake)
               }
               if (direction === "R" || direction === "r") {
                      this.snake[0] = this.snake[0] + 1;
-                     console.log("snake moved R", this.snake)
+                     console.log("snake moved R, new position -->", this.snake)
               }
 
 
