@@ -50,6 +50,7 @@ class SnakeGame {
                      this.snake[0] = this.snake[0] + 1;
                      console.log("snake moved R, new position -->", this.snake)
               }
+              //account for tail moves
 
 
               //account for tail in move
