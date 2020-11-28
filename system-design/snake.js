@@ -54,7 +54,21 @@ class SnakeGame {
               if (this.tail.length === this.past.length) {
                      for (let i = 0; i < this.past.length; i++) {
                             switch (this.past[i]) {
+                                   // diagonal past moves -- y
                                    case 'U':
+                                          this.tail[i][1] += 1;
+                                          break;
+                                   case 'D':
+                                          this.tail[i][1] -= 1;
+                                          break;
+                                   // horizontail past moves -- x
+                                   case 'R':
+                                          this.tail[i][0] += 1;
+                                          break;
+                                   case 'L':
+                                          this.tail[i][0] -= 1;
+                                          break;
+
 
                             }
                      }
