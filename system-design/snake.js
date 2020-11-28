@@ -111,6 +111,8 @@ class SnakeGame {
                      return this.score
               }
 
+              //check for tail crash
+
               //storing and eliminating past moves
               this.past.unshift(direction)
               this.past.pop()
