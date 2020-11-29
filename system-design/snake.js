@@ -12,7 +12,7 @@ class SnakeGame {
        constructor(width, height, food) {
               this.width = width;
               this.height = height;
-              this.food = food;
+              this.food = food; //row column
 
               this.snake = [0, 0]; //row column
               this.tail = [];
@@ -32,24 +32,22 @@ class SnakeGame {
        move(direction) {
               console.log('---start---\n', this.snake, 'food ->', this.food)
               switch (direction) {
-                     //diagonal move -- y coordinate
+                     //diagonal move -- this.snake[0] -- row
                      case 'U':
                             this.snake[0] = this.snake[0] + 1;
                             console.log("snake moved U, new position -->", this.snake);
                      case 'D':
                             this.snake[0] = this.sanke[0] - 1;
                             console.log("snake moved D, new position -->", this.snake)
-                     //horizontal move -- x coordinate
+                     //horizontal move -- this.snake[1] -- column
+                     case 'L':
+                            this.snake[1] = this.snake[1] - 1;
+                            console.log("snake moved L, new position -->", this.snake)
+                     case 'R':
+                            this.snake[1] = this.snake[1] + 1;
+                            console.log("snake moved R, new position -->", this.snake)
               }
 
-              if (direction === "L" || direction === "l") {
-                     this.snake[0] = this.snake[0] - 1;
-                     console.log("snake moved L, new position -->", this.snake)
-              }
-              if (direction === "R" || direction === "r") {
-                     this.snake[0] = this.snake[0] + 1;
-                     console.log("snake moved R, new position -->", this.snake)
-              }
               //account for tail moves
               if (this.tail.length === this.past.length) {
                      for (let i = 0; i < this.past.length; i++) {
