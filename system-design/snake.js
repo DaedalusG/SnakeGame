@@ -142,9 +142,7 @@ snake.move('D')
 snake.move('L')
 snake.move('U')
 snake.move('U')
-snake.move('R')
-snake.move('N')
-snake.move('S')
+
 
 /**
  * Your SnakeGame object will be instantiated and called as such:
