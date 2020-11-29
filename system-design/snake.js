@@ -38,7 +38,7 @@ class SnakeGame {
                             console.log("snake moved U, new position -->", this.snake);
                             break;
                      case 'D':
-                            this.snake[0] = this.sanke[0] - 1;
+                            this.snake[0] = this.snake[0] - 1;
                             console.log("snake moved D, new position -->", this.snake);
                             break;
                      //horizontal move -- this.snake[1] -- column
