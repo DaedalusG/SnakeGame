@@ -36,16 +36,20 @@ class SnakeGame {
                      case 'U':
                             this.snake[0] = this.snake[0] + 1;
                             console.log("snake moved U, new position -->", this.snake);
+                            break;
                      case 'D':
                             this.snake[0] = this.sanke[0] - 1;
-                            console.log("snake moved D, new position -->", this.snake)
+                            console.log("snake moved D, new position -->", this.snake);
+                            break;
                      //horizontal move -- this.snake[1] -- column
                      case 'L':
                             this.snake[1] = this.snake[1] - 1;
-                            console.log("snake moved L, new position -->", this.snake)
+                            console.log("snake moved L, new position -->", this.snake);
+                            break;
                      case 'R':
                             this.snake[1] = this.snake[1] + 1;
-                            console.log("snake moved R, new position -->", this.snake)
+                            console.log("snake moved R, new position -->", this.snake);
+                            break;
               }
 
               //account for tail moves
