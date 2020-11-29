@@ -136,11 +136,11 @@ class SnakeGame {
 }
 
 let snake = new SnakeGame(2, 3, [[1, 2], [0, 1]])
-snake.move('U')
 snake.move('R')
 snake.move('D')
-snake.move('L')
+snake.move('R')
 snake.move('U')
+snake.move('L')
 snake.move('U')
 
 
