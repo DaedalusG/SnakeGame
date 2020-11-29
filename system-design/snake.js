@@ -30,18 +30,18 @@ class SnakeGame {
                  */
 
        move(direction) {
-              // console.log('---start---\n', this.snake, 'food ->', this.food)
-              //diagonal move -- y coordinate
-              if (direction === "U" || direction === "u") {
-                     this.snake[1] = this.snake[1] + 1;
-                     console.log("snake moved U, new position -->", this.snake)
-              }
-              if (direction === "D" || direction === "d") {
-                     this.snake[1] = this.snake[1] - 1;
-                     console.log("snake moved D, new position -->", this.snake)
+              console.log('---start---\n', this.snake, 'food ->', this.food)
+              switch (direction) {
+                     //diagonal move -- y coordinate
+                     case 'U':
+                            this.snake[0] = this.snake[0] + 1;
+                            console.log("snake moved U, new position -->", this.snake);
+                     case 'D':
+                            this.snake[0] = this.sanke[0] - 1;
+                            console.log("snake moved D, new position -->", this.snake)
+                     //horizontal move -- x coordinate
               }
 
-              //horizontal move -- x coordinate
               if (direction === "L" || direction === "l") {
                      this.snake[0] = this.snake[0] - 1;
                      console.log("snake moved L, new position -->", this.snake)
