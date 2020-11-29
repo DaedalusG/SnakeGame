@@ -135,16 +135,16 @@ class SnakeGame {
        }
 }
 
-// let snake = new SnakeGame(5, 5, [[0, 1], [1, 0], [2, 0], [1, 2], [2, 3]])
-// snake.move('U')
-// snake.move('R')
-// snake.move('D')
-// snake.move('L')
-// snake.move('U')
-// snake.move('U')
-// snake.move('R')
-// snake.move('N')
-// snake.move('S')
+let snake = new SnakeGame(2, 3, [[0, 1], [1, 0], [2, 0], [1, 2], [2, 3]])
+snake.move('U')
+snake.move('R')
+snake.move('D')
+snake.move('L')
+snake.move('U')
+snake.move('U')
+snake.move('R')
+snake.move('N')
+snake.move('S')
 
 /**
  * Your SnakeGame object will be instantiated and called as such:
