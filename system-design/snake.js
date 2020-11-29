@@ -80,19 +80,8 @@ class SnakeGame {
                      }
               }
 
-
-              //account for tail in move
-              // if (this.tail.length) this.tail.pop()
-              // for (let i = 0; i < this.tail.length; i++) {
-              //        if (this.snake === this.tail[i]) {
-              //               this.score === -1;
-              //               return this.score
-              //        }
-              // }
-
-
               //check for food
-              if ((this.snake[0] === this.food[0][0]) && (this.snake[1] === this.food[0][1])) {
+              if ((this.food.length > 0) && (this.snake[0] === this.food[0][0]) && (this.snake[1] === this.food[0][1])) {
                      console.log("got food")
                      this.score += 1;
                      this.food.shift()
