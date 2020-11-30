@@ -80,6 +80,17 @@ class SnakeGame {
                      }
               }
 
+              //check for tail crash
+              if (this.tail.length > 0) {
+                     for (let i = 0; i < this.tail.length; i++) {
+                            if ((this.tail[i][0] === this.snake[0]) && (this.tail[i][1] === this.snake[1])) {
+                                   console.log("Tail Crash!")
+                                   this.score = -1
+                                   return this.score
+                            }
+                     }
+              }
+
               //check for food
               if ((this.food.length > 0) && (this.snake[0] === this.food[0][0]) && (this.snake[1] === this.food[0][1])) {
                      console.log("got food")
@@ -102,16 +113,6 @@ class SnakeGame {
                      return this.score
               }
 
-              //check for tail crash
-              if (this.tail.length > 0) {
-                     for (let i = 0; i < this.tail.length; i++) {
-                            if ((this.tail[i][0] === this.snake[0]) && (this.tail[i][1] === this.snake[1])) {
-                                   console.log("Tail Crash!")
-                                   this.score = -1
-                                   return this.score
-                            }
-                     }
-              }
 
               //storing and eliminating past moves
               this.past.unshift(direction)
