@@ -102,12 +102,12 @@ class SnakeGame {
               }
 
               //check for wall
-              if (this.snake[0] > this.height) {
+              if (this.snake[0] > this.width) {
                      console.log('hit wall')
                      this.score = -1
                      return this.score
               }
-              if (this.snake[1] > this.width) {
+              if (this.snake[1] > this.height) {
                      console.log('hit wall')
                      this.score = -1
                      return this.score
