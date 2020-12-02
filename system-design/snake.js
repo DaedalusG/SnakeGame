@@ -30,7 +30,7 @@ class SnakeGame {
                  */
 
        move(direction) {
-              console.log('---start---\n', this.snake, 'food ->', this.food)
+              // console.log('---start---\n', this.snake, 'food ->', this.food)
               switch (direction) {
                      //diagonal move -- this.snake[0] -- row
                      case 'U':
