@@ -127,13 +127,14 @@ class SnakeGame {
        }
 }
 
-let snake = new SnakeGame(2, 3, [[1, 2], [0, 1]])
+let snake = new SnakeGame(5, 5, [[1, 2], [0, 2], [2, 2]])
 snake.move('R')
 snake.move('D')
 snake.move('R')
 snake.move('U')
 snake.move('L')
-snake.move('U')
+snake.move('D')
+snake.move('R')
 
 
 /**
