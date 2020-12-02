@@ -130,7 +130,7 @@ class SnakeGame {
 
 let snake = new SnakeGame(1, 1, [[]])
 snake.move('R')
-snake.move('D')
+
 
 
 /**
