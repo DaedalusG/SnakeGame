@@ -52,6 +52,17 @@ class SnakeGame {
                             break;
               }
 
+              //check for tail crash
+              if (this.tail.length > 0) {
+                     for (let i = 0; i < this.tail.length; i++) {
+                            if ((this.tail[i][0] === this.snake[0]) && (this.tail[i][1] === this.snake[1])) {
+                                   console.log("Tail Crash!")
+                                   this.score = -1
+                                   return this.score
+                            }
+                     }
+              }
+
               //account for tail moves
               if (this.tail.length === this.past.length) {
                      for (let i = 0; i < this.past.length; i++) {
@@ -80,16 +91,6 @@ class SnakeGame {
                      }
               }
 
-              //check for tail crash
-              if (this.tail.length > 0) {
-                     for (let i = 0; i < this.tail.length; i++) {
-                            if ((this.tail[i][0] === this.snake[0]) && (this.tail[i][1] === this.snake[1])) {
-                                   console.log("Tail Crash!")
-                                   this.score = -1
-                                   return this.score
-                            }
-                     }
-              }
 
               //check for food
               if ((this.food.length > 0) && (this.snake[0] === this.food[0][0]) && (this.snake[1] === this.food[0][1])) {
@@ -127,14 +128,9 @@ class SnakeGame {
        }
 }
 
-let snake = new SnakeGame(5, 5, [[1, 2], [0, 2], [2, 2]])
+let snake = new SnakeGame(2, 2, [[0, 1]])
 snake.move('R')
 snake.move('D')
-snake.move('R')
-snake.move('U')
-snake.move('L')
-snake.move('D')
-snake.move('R')
 
 
 /**
