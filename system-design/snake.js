@@ -143,7 +143,7 @@ snake.move('L')
 snake.move('L')
 snake.move('D')
 snake.move('R')
-snake.move('U')
+snake.move('U') //final move should result in -1 output
 
 
 
