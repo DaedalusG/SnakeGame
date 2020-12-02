@@ -35,20 +35,20 @@ class SnakeGame {
                      //diagonal move -- this.snake[0] -- row
                      case 'U':
                             this.snake[0] = this.snake[0] - 1;
-                            console.log("snake moved U, new position -->", this.snake);
+                            // console.log("snake moved U, new position -->", this.snake);
                             break;
                      case 'D':
                             this.snake[0] = this.snake[0] + 1;
-                            console.log("snake moved D, new position -->", this.snake);
+                            // console.log("snake moved D, new position -->", this.snake);
                             break;
                      //horizontal move -- this.snake[1] -- column
                      case 'L':
                             this.snake[1] = this.snake[1] - 1;
-                            console.log("snake moved L, new position -->", this.snake);
+                            // console.log("snake moved L, new position -->", this.snake);
                             break;
                      case 'R':
                             this.snake[1] = this.snake[1] + 1;
-                            console.log("snake moved R, new position -->", this.snake);
+                            // console.log("snake moved R, new position -->", this.snake);
                             break;
               }
 
@@ -58,20 +58,20 @@ class SnakeGame {
                             switch (this.past[i]) {
                                    // diagonal past moves -- y
                                    case 'U':
-                                          console.log(`tail ${i} moved ${this.past[i]}`)
+                                          // console.log(`tail ${i} moved ${this.past[i]}`)
                                           this.tail[i][0] += 1;
                                           break;
                                    case 'D':
-                                          console.log(`tail ${i} moved ${this.past[i]}`)
+                                          // console.log(`tail ${i} moved ${this.past[i]}`)
                                           this.tail[i][0] -= 1;
                                           break;
                                    // horizontail past moves -- x
                                    case 'R':
-                                          console.log(`tail ${i} moved ${this.past[i]}`)
+                                          // console.log(`tail ${i} moved ${this.past[i]}`)
                                           this.tail[i][1] += 1;
                                           break;
                                    case 'L':
-                                          console.log(`tail ${i} moved ${this.past[i]}`)
+                                          // console.log(`tail ${i} moved ${this.past[i]}`)
                                           this.tail[i][1] -= 1;
                                           break;
 
@@ -84,7 +84,7 @@ class SnakeGame {
               if (this.tail.length > 0) {
                      for (let i = 0; i < this.tail.length; i++) {
                             if ((this.tail[i][0] === this.snake[0]) && (this.tail[i][1] === this.snake[1])) {
-                                   console.log("Tail Crash!")
+                                   // console.log("Tail Crash!")
                                    this.score = -1
                                    return this.score
                             }
@@ -93,7 +93,7 @@ class SnakeGame {
 
               //check for food
               if ((this.food.length > 0) && (this.snake[0] === this.food[0][0]) && (this.snake[1] === this.food[0][1])) {
-                     console.log("got food")
+                     // console.log("got food")
                      this.score += 1;
                      this.food.shift()
                      //account for tail
@@ -103,12 +103,12 @@ class SnakeGame {
 
               //check for wall
               if (this.snake[0] > this.width) {
-                     console.log('hit wall')
+                     // console.log('hit wall')
                      this.score = -1
                      return this.score
               }
               if (this.snake[1] > this.height) {
-                     console.log('hit wall')
+                     // console.log('hit wall')
                      this.score = -1
                      return this.score
               }
@@ -118,10 +118,10 @@ class SnakeGame {
               this.past.unshift(direction)
               this.past.pop()
 
-              console.log("this.food -->", this.food)
-              console.log("this.tail -->", this.tail)
-              console.log("this.past -->", this.past)
-              console.log("this.score -->", this.score)
+              // console.log("this.food -->", this.food)
+              // console.log("this.tail -->", this.tail)
+              // console.log("this.past -->", this.past)
+              // console.log("this.score -->", this.score)
 
               return this.score
        }
