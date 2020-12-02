@@ -138,6 +138,12 @@ snake.move('L')
 snake.move('D')
 snake.move('R')
 snake.move('R')
+snake.move('U')
+snake.move('L')
+snake.move('L')
+snake.move('D')
+snake.move('R')
+snake.move('U')
 
 
 
